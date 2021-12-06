@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./styles/style.css">
+
+        <link rel="shortcut icon" sizes="48x48" href="./images/play-button.png" type="image/jpg">
+
+        <title>Player Music | Gessiel</title>
+        <meta name="description" content="Simples site que toca Ophelia - The Lumineers.">
+        <meta name="author" content="Gessiel José Januário Júnior">
+    </head>
+    <body>
+        
+        <main>
+
+            <section>
+                <div class="left-colum">
+                    <h1>THE <br>REAL <br>MUSIC </h1>
+                </div>
+
+                <div class="rig-colum">
+                    <img src="./images/play-button.png" alt="Play button to start a song" id="icon">
+
+                </div>
+            </section>
+
+            <audio id="my_song">
+                <source src="./music/TheLumineers-The-Ballad.mp3" type="video/mp4">
+            </audio>
+
+        </main>
+
+        <script>
+            var my_song = document.getElementById("my_song");
+            var icon = document.getElementById("icon");
+
+            icon.onclick = function() {
+                if(my_song.paused) {
+                    my_song.play();
+                    icon.src = "./images/pause-button.png";
+            } else {
+                my_song.pause();
+                icon.src = "./images/play-button.png";
+                }
+            }
+            
+        </script>
+
+    </body>
+</html>
